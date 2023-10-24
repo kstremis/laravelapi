@@ -10,3 +10,5 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 }
+$user = User::find(1);
+$user->assignRole('admin');

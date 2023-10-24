@@ -43,3 +43,13 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 }
+use Spatie\Permission\Models\Role;
+
+$roles = [
+    'admin',
+    'user',
+];
+
+foreach ($roles as $role) {
+    Role::create(['name' => $role]);
+}
